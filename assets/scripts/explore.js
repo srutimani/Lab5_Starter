@@ -60,4 +60,8 @@ function init() {
       smileyFace.src = 'assets/images/smiling.png';
     }
   }
+
+  if(!amISpeaking) {
+    smileyFace.src = 'assets/images/smiling.png';
+  }
 }
