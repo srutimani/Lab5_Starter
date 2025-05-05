@@ -50,6 +50,8 @@ function init() {
         utterThis.voice = voices[i];
       }
     }
+    smileyFace.src = 'assets/images/smiling-open.png';
+
     synth.speak(utterThis);
 
     const checkSpeaking = setInterval(() => {
