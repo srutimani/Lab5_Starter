@@ -60,8 +60,9 @@ function init() {
       smileyFace.src = 'assets/images/smiling.png';
     }
   }
+  const speaking = synth.speaking;
 
-  if(!amISpeaking) {
+  if(!speaking) {
     smileyFace.src = 'assets/images/smiling.png';
   }
 }
