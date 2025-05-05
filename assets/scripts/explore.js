@@ -52,9 +52,8 @@ function init() {
     }
     synth.speak(utterThis);
 
-    const amISpeaking = synth.speaking;
     const checkSpeaking = setInterval(() => {
-      if(amISpeaking) {
+      if(synth.speaking) {
         smileyFace.src = 'assets/images/smiling-open.png';
       }
       else {
