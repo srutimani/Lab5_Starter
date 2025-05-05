@@ -53,16 +53,14 @@ function init() {
     synth.speak(utterThis);
 
     const amISpeaking = synth.speaking;
-    if(amISpeaking) {
-      smileyFace.src = 'assets/images/smiling-open.png';
-    }
-    else {
-      smileyFace.src = 'assets/images/smiling.png';
-    }
-  }
-  const speaking = false;
-
-  if(!speaking) {
-    smileyFace.src = 'assets/images/smiling.png';
+    const checkSpeaking = setInterval(() => {
+      if(amISpeaking) {
+        smileyFace.src = 'assets/images/smiling-open.png';
+      }
+      else {
+        smileyFace.src = 'assets/images/smiling.png';
+        clearInterval(checkSpeaking);
+      }
+    }, 100);
   }
 }
